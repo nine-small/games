@@ -1,0 +1,26 @@
+// 配置tsconfig.json
+{
+    "compilerOptions":{
+        // 编译的目标版本
+        "target":"es2016",
+        // 模块化标准，最新的模块化标准
+        "module":"esnext",
+        // 环境
+        "lib":["es2016","dom"],
+        // 不用配置这个选项了，现在是由webpack来打包，不是ts打包
+        // "outDir":"./dist",
+        // 代码地图
+        "sourceMap":true,
+        // 所有东西都经过严格的类型检查，使用严格模式
+        "strict":true,
+        // 移除注释
+        "removeComments":true,
+        // 用es的模块化和非es模块化的标准进行交互
+        "esModuleInterop":true,
+        // 模块解析方式
+        "moduleResolution":"node",
+        // 每个单独的文件必须是一个模块
+        "isolatedModules":true    
+    },
+    "include":["./src"]
+}
