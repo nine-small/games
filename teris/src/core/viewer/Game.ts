@@ -130,6 +130,7 @@ export class Game {
     this._nextTeris= createTeris({ x: 0, y: 0 }); // 先随便写一个中心点位置，后续修改
     this._viewer.showNext(this._nextTeris)
     this._exicts = [];
+    this._score = 0
   }
   /**
    * 清除页面中的显示

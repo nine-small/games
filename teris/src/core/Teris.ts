@@ -123,11 +123,11 @@ export class LineShape extends SquareGroup {
 
 // 形状数组
 export const ShapeArrs = [
-  // TShpae,
-  // LShape,
-  // LMirrorShape,
-  // SShape,
-  // SMirrorShape,
+  TShpae,
+  LShape,
+  LMirrorShape,
+  SShape,
+  SMirrorShape,
   SquareShape,
   LineShape,
 ];
