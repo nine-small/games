@@ -1,3 +1,5 @@
+import { SquareGroup } from "./SquareGroup";
+import { Game } from "./viewer/Game";
 
 export interface Point {
   readonly x: number;
@@ -25,4 +27,35 @@ export enum Direction {
   left,
   right,
   down
+}
+/**
+ * init 未开始
+ * playing 游戏中
+ * pause 暂停
+ * over 游戏结束
+ */
+export enum GameStatus {
+  /**
+   * 未开始
+   */
+  init,
+  /**
+   * 游戏中
+   */
+  playing,
+  /**
+   * 暂停
+   */
+  pause,
+  /**
+   * 游戏结束
+   */
+  over
+}
+
+export interface GameViewer {
+  showNext(teris:SquareGroup):void
+  switch(teris:SquareGroup):void
+  showScore(score:number):void
+  init(g:Game):void
 }

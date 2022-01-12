@@ -17,7 +17,7 @@ export class SquarePageViewer implements IViewer {
       this.dom = $("<div>").css({
         width: pageconfig.SquareViewer.size,
         height: pageconfig.SquareViewer.size,
-        border: "1px solid #008c8c",
+        border: "1px solid #eee",
         boxSizing: "border-box",
         position: "absolute",
         backgroundColor: this.square.color, // 颜色值也应该在生成的时候就确定了,后续是可以改变的。
@@ -32,7 +32,7 @@ export class SquarePageViewer implements IViewer {
       .appendTo(this.container);
   }
   hidden(): void {
-      !this.isRemove && this.dom?.remove()
+      !this.isRemove && this.dom!.remove()
   }
 }
 

@@ -1,5 +1,5 @@
 export default {
     SquareViewer:{
-        size:30
+        size:15
     }
 }

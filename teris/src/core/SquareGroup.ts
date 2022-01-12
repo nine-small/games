@@ -58,6 +58,10 @@ export class SquareGroup {
     this._squares = arr;
   }
   protected _isClock = true;
+  /**
+   * 旋转过后的形状
+   * @returns 
+   */
   public afterRotateShape(): Shape {
     if (this._isClock) {
       return this._shape.map((p) => ({
@@ -71,8 +75,8 @@ export class SquareGroup {
     }));
   }
 
-  public rotate() {
-    if (TerisRule.isRotate(this)) {
+  public rotate(exicts: Square[]) {
+    if (TerisRule.isRotate(this,exicts)) {
       this.shape = this.afterRotateShape();
     }
   }

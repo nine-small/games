@@ -1,26 +1,38 @@
+import { Game } from "./core/viewer/Game";
+import { GamePageViewer } from "./core/viewer/GamePageViewer";
 import $ from 'jquery'
-import { createTeris } from "./core/Teris"
-import { TerisRule } from './core/TerisRule'
-import { Direction } from './core/Types'
-import { SquarePageViewer } from "./core/viewer/SquarePageViewer"
+import { Direction } from "./core/Types";
+import { TerisRule } from "./core/TerisRule";
 
-// 小方块组合类
-const squares = createTeris({x:3,y:2})
-//  小方块的展示
-squares.squares.forEach(ele=>{
-    ele.viewer = new SquarePageViewer(ele,$("#root"))
-    ele.viewer.show()
-})
+
+const g = new Game(new GamePageViewer())
+// g.start();
+
+
+// // 小方块组合类
+// const squares = createTeris({x:3,y:2})
+// //  小方块的展示
+// squares.squares.forEach(ele=>{
+//     ele.viewer = new SquarePageViewer(ele,$("#root"))
+//     ele.viewer.show()
+// })
 
 $('#left').click(()=>{
-    TerisRule.moveDirectly(squares,Direction.left)
+    g.leftMove()
 })
 $('#right').click(()=>{
-    TerisRule.moveDirectly(squares,Direction.right)
+    g.rightMove()
 })
 $('#up').click(()=>{
-  squares.rotate()
+  g.rotate()
 })
 $('#down').click(()=>{
-    TerisRule.moveDirectly(squares,Direction.down)
+    g.bottomMove()
+})
+$("#start").on("click",()=>{
+    g.start()
+})
+
+$("#pause").on("click",()=>{
+    g.pause()
 })

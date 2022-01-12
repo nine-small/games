@@ -7,42 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>俄罗斯方块小游戏</title>
     <style>
-        #root {
-            width: 300px;
-            height: 300px;
-            border: 1px solid #eee;
-            background-color: rgba(255, 255, 255, .2);
-            margin: 0 auto;
+        .wrap{
+            display: flex;
+            justify-content: center;
+        }
+        #next-teris {
             position: relative;
         }
-        .direction{
+        .direction {
             display: flex;
             justify-content: center;
 
         }
-        .btn {
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
+
+        p{
             text-align: center;
-            font-style: 20px;
-            box-shadow: 0 0 2px 2px #000;
-            margin: 15px 20px;
-            cursor: pointer;
         }
+
+   
     </style>
 </head>
 
 <body>
-    <div id="root"></div>
-    <div class="direction">
-        <div id="down" class="btn">DOWN</div>
-        <div class="btn" id="left">LEFT</div>
-        <div class="btn" id="right">RIGHT</div>
-        <div class="btn" id="up">UP</div>
+    <div class="wrap">
+        <div id="root"></div>
+        <div id="next">
+            <div id="next-teris">
+            </div>
+            <div id="score">
+                <span>当前得分：</span>
+                <span id="i-score">0分</span>     
+            </div>
+        </div>
     </div>
-    <div id="hidden" class="btn">HIDDEN</div>
-    <div id="show" class="btn">SHOW</div>
+    <p>↑表示旋转 ↓直接落地 ←向左移动 →向右移动  空格：暂停、开始  回车：重新开始</p>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 // 预定义一些形状
 
+import { Square } from "./Square";
 import { SquareGroup } from "./SquareGroup";
 import { Point, Shape } from "./Types";
 import { Random } from "./utils";
@@ -59,8 +60,8 @@ export class SShape extends SquareGroup {
       _color
     );
   }
-  public rotate(): void {
-    super.rotate()
+  public rotate(exicts:Square[]): void {
+    super.rotate(exicts)
     this._isClock = !this._isClock
   }
 }
@@ -77,8 +78,8 @@ export class SMirrorShape extends SquareGroup {
       _color
     );
   }
-  public rotate(): void {
-      super.rotate()
+  public rotate(exicts:Square[]): void {
+      super.rotate(exicts)
       this._isClock = !this._isClock;
   }
 }
@@ -112,8 +113,8 @@ export class LineShape extends SquareGroup {
       _color
     );
   }
-  public rotate(){
-    super.rotate()
+  public rotate(exicts:Square[]){
+    super.rotate(exicts)
     this._isClock = !this._isClock
   }
 }
@@ -122,11 +123,11 @@ export class LineShape extends SquareGroup {
 
 // 形状数组
 export const ShapeArrs = [
-  TShpae,
-  LShape,
-  LMirrorShape,
-  SShape,
-  SMirrorShape,
+  // TShpae,
+  // LShape,
+  // LMirrorShape,
+  // SShape,
+  // SMirrorShape,
   SquareShape,
   LineShape,
 ];

@@ -34,7 +34,8 @@ export class Square {
 
   // 显示者的查看和赋值。
   public set viewer(v){
-      this._viewer = v
+      this._viewer = v;
+      this._viewer?.show()
   }
 
   public get viewer(){
